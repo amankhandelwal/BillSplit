@@ -1,0 +1,59 @@
+{
+	"events": [
+		{
+			"title": "Trip to abc",
+			"id": 1,
+			"members": [123232, 1231323, 123124],
+			"transactions": [
+				{
+					"title": "Cab fare",
+					"id": 1,
+					"amount": 500,
+					"between": [123232, 1231323, 123124],
+					"paidBy": "123232"
+				},
+				{
+					"title": "Cab fare",
+					"id": 2,
+					"amount": 200,
+					"between": [123232, 1231323, 123124],
+					"paidBy": "123232"
+				}
+			]
+		},
+		{
+			"title": "Xyz bday",
+			"id": 2,
+			"members": [123232, 1231323, 123124],
+			"transactions": [
+				{
+					"title": "Cake",
+					"id": 1,
+					"amount": 500,
+					"between": [123232, 1231323, 123124],
+					"paidBy": 123232
+				},
+				{
+					"title": "props",
+					"id": 2,
+					"amount": 200,
+					"between": [123232, 1231323, 123124],
+					"paidBy": 123232
+				}
+			]
+		}
+	],
+	"member": [
+		{
+			"memberName": "Aman Khandelwal",
+			"username": "amankhandelwal",
+			"password": "abcd",
+			"memberName": "Aman Khandelwal",
+			"memberId": "123232",
+			"Auth": "sadkfu6154",
+			"profile": "source.unsplash.com/random/150x150",
+			"transactions": [1, 2],
+			"friends": [123232, 1231323, 123124]
+		}
+	]
+}
