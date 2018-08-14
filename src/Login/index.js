@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from './CustomInput.js';
+import Input from '../CustomInput';
 import './Login.css';
 
 export default class Login extends React.Component {

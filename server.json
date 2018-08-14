@@ -45,14 +45,13 @@
 	],
 	"member": [
 		{
-			"memberName": "Aman Khandelwal",
+			"name": "Aman Khandelwal",
 			"username": "amankhandelwal",
 			"password": "abcd",
-			"memberName": "Aman Khandelwal",
 			"memberId": "123232",
 			"Auth": "sadkfu6154",
 			"profile": "source.unsplash.com/random/150x150",
-			"transactions": [1, 2],
+			"events": [1, 2],
 			"friends": [123232, 1231323, 123124]
 		}
 	]
