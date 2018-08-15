@@ -9,7 +9,7 @@ export default class CustomInput extends React.Component {
 	render() {
 		return (
 			<div className="input-container">
-				<p className="input-label">{this.props.label}: </p>
+				<p className="input-label">{this.props.label}:</p>
 				<input className={'input-field ' + this.props.className} type="text" style={this.props.style} />
 			</div>
 		);

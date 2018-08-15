@@ -6,6 +6,7 @@
 .input-label {
 	font-size: 0.7em;
 	flex: 1;
+	padding-right: 1%;
 }
 .input-field {
 	flex: 3;
