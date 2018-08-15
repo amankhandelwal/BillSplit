@@ -1,0 +1,15 @@
+.dashboard-container {
+	display: flex;
+	min-height: 50vh;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.event-item {
+	flex: 1;
+	align-self: stretch;
+	justify-content: center;
+	background-color: #ffed4d;
+	padding: 0px 0px 0px 20px;
+	color: #422;
+	border-radius: 5px;
+}
