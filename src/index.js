@@ -5,5 +5,5 @@ import App from './App';
 import Events from './Dashboard';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Events />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
