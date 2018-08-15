@@ -3,13 +3,21 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 	flex: 1;
-	max-width: 14.5%;
-	margin-bottom: 2%;
-	background-color: #fff;
-	border: 1px solid #fff;
-	box-shadow: 4px 4px #aaa;
+	margin-top: 1vh;
+	width: 90vw;
+	max-height: 10vh;
+	min-height: 5vh;
+	/*margin-bottom: 9%;*/
+	/*background-color: #fff;*/
+	/*border: 2px solid #cbdaf2;*/
+	font-family: Raleway;
+	font-weight: bold;
+	box-shadow: 3px 3px #aaaaaa80;
+	border-radius: 5px;
+	transform: translateX(-100vw);
+	animation: fromLeft 300ms ease-in-out 200ms forwards;
 }
 .card-title {
 	font-size: 1.3em;
@@ -32,6 +40,18 @@
 @media screen and (max-width: 600px) {
 	.card {
 		min-width: 85vw;
-		margin-bottom: 5vw;
+		margin-bottom: 1vw;
+	}
+}
+
+@keyframes fromLeft {
+	from {
+		opacity: 20;
+		transform: translateX(-100vw);
+	}
+
+	to {
+		opacity: 100;
+		transform: translateX(0vw);
 	}
 }

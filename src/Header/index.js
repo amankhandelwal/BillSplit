@@ -11,7 +11,7 @@ export default class Header extends React.Component {
 		return (
 			<div className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
-				<h1 className="App-title">Bill Split</h1>
+				<h1 className="App-title">{this.props.children}</h1>
 			</div>
 		);
 	}

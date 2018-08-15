@@ -41,9 +41,51 @@
 					"paidBy": 123232
 				}
 			]
+		},
+		{
+			"title": "Trip to abc",
+			"id": 3,
+			"members": [123232, 1231323, 123124],
+			"transactions": [
+				{
+					"title": "Cab fare",
+					"id": 1,
+					"amount": 500,
+					"between": [123232, 1231323, 123124],
+					"paidBy": "123232"
+				},
+				{
+					"title": "Cab fare",
+					"id": 2,
+					"amount": 200,
+					"between": [123232, 1231323, 123124],
+					"paidBy": "123232"
+				}
+			]
+		},
+		{
+			"title": "Xyz bday",
+			"id": 4,
+			"members": [123232, 1231323, 123124],
+			"transactions": [
+				{
+					"title": "Cake",
+					"id": 1,
+					"amount": 500,
+					"between": [123232, 1231323, 123124],
+					"paidBy": 123232
+				},
+				{
+					"title": "props",
+					"id": 2,
+					"amount": 200,
+					"between": [123232, 1231323, 123124],
+					"paidBy": 123232
+				}
+			]
 		}
 	],
-	"member": [
+	"members": [
 		{
 			"name": "Aman Khandelwal",
 			"username": "amankhandelwal",
@@ -51,8 +93,28 @@
 			"memberId": "123232",
 			"Auth": "sadkfu6154",
 			"profile": "source.unsplash.com/random/150x150",
-			"events": [1, 2],
+			"events": [1, 2, 3, 4],
 			"friends": [123232, 1231323, 123124]
+		},
+		{
+			"name": "Nilesh Kumar pandey",
+			"username": "nileshkk9",
+			"password": "hello",
+			"memberId": "45699",
+			"Auth": "fuckyouman",
+			"profile": "source.unsplash.com/random/150x150",
+			"events": [1],
+			"friends": [123232, 44444]
+		},
+		{
+			"name": "monu",
+			"username": "monu",
+			"password": "monu",
+			"memberId": "44444",
+			"Auth": "fuckboy",
+			"profile": "source.unsplash.com/random/150x150",
+			"events": [1, 2],
+			"friends": [123232, 45699]
 		}
 	]
 }
