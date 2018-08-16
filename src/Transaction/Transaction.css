@@ -1,16 +1,17 @@
 .dashboard-container {
 	display: flex;
-	min-height: 50vh;
 	flex-direction: column;
+	flex: 1;
+	min-height: 50vh;
+	max-height: 100vh;
 	justify-content: flex-start;
 }
-.event-item {
+.transaction-item {
 	flex: 1;
 	align-self: stretch;
-	justify-content: center;
+	justify-content: flex-start;
 	background-color: #ffed4d;
 	padding: 0px 0px 0px 20px;
 	color: #422;
 	border-radius: 5px;
-	max-height: 10vh;
 }
