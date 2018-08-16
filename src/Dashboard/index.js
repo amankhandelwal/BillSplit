@@ -41,7 +41,6 @@ export default class Events extends React.Component {
 
 	render() {
 		const members = this.state.members;
-		//const member=members[0];
 		let allMyEvents = <div />;
 		if (members.length != 0 && this.state.events.length != 0) {
 			const member = members[0];

@@ -1,7 +1,8 @@
-import React from 'react';
-import Card from '../Card';
-import Header from '../Header';
-import './Transaction.css';
+import React from "react";
+import Card from "../Card";
+import Header from "../Header";
+import "./Transaction.css";
+import Accordion from "../Accordion";
 
 export default class Transaction extends React.Component {
 	constructor(props) {
@@ -10,21 +11,21 @@ export default class Transaction extends React.Component {
 			loading: true,
 			transactions: {
 				asdfa2b3c3a: {
-					title: 'Cab fare',
-					id: 'asdfa2b3c3a',
-					amount: '500',
-					between: ['1a2b3c3a', '275dssdg', '4dsgdssdg'],
-					paidBy: '1a2b3c3a'
+					title: "Cab fare",
+					id: "asdfa2b3c3a",
+					amount: "500",
+					between: ["1a2b3c3a", "275dssdg", "4dsgdssdg"],
+					paidBy: "1a2b3c3a"
 				},
-				'23ewi': {
-					title: 'Cab fare',
-					id: '23ewi',
-					amount: '200',
-					between: ['1a2b3c3a', '275dssdg', '4dsgdssdg'],
-					paidBy: '1a2b3c3a'
+				"23ewi": {
+					title: "Cab fare",
+					id: "23ewi",
+					amount: "200",
+					between: ["1a2b3c3a", "275dssdg", "4dsgdssdg"],
+					paidBy: "1a2b3c3a"
 				}
 			},
-			eventId: '23ewi',
+			eventId: "23ewi",
 			membersId: [],
 			members: {}
 		};
@@ -32,19 +33,19 @@ export default class Transaction extends React.Component {
 	}
 
 	componentWillMount() {
-		fetch('http://localhost:8080/members')
+		fetch("http://localhost:8080/members")
 			.then(response => response.json())
 			.then(data => {
 				console.log(data);
 				this.setState({ members: data, loading: false });
 			})
 			.catch(() => {
-				console.log('Aww Snap !!');
+				console.log("Aww Snap !!");
 			});
 	}
 
 	fetchMembers = id => {
-		console.log('members', this.state.members);
+		console.log("members", this.state.members);
 		return this.state.members[id].name;
 	};
 
@@ -54,11 +55,13 @@ export default class Transaction extends React.Component {
 		//const member=members[0];
 		let allMyTransactions = <div />;
 		if (this.state.loading == false && transactions.length != 0) {
-			console.log('Aaaayaaaa');
+			console.log("Aaaayaaaa");
 			allMyTransactions = transactionId.map(id => {
 				const transaction = transactions[id];
-				transaction['between'] = transaction['between'].map(this.fetchMembers);
-				console.log('Transaction betweeen', transaction.between);
+				transaction["between"] = transaction["between"].map(
+					this.fetchMembers
+				);
+				console.log("Transaction betweeen", transaction.between);
 				return <TransactionCard>{transaction}</TransactionCard>;
 			});
 		}
@@ -77,37 +80,14 @@ const TransactionCard = props => {
 	return Card(
 		<div className="transaction-item">
 			<h3>{items.title}</h3>
-			<Accordian>
-				<ul>{items.between.map(member => <li>{member}</li>)}</ul>
-			</Accordian>
+			<Accordion>
+				<ul>
+					{items.between.map(member => (
+						<li>{member}</li>
+					))}
+				</ul>
+			</Accordion>
 		</div>
 	);
 };
 
-class Accordian extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			visible: true
-		};
-	}
-
-	render() {
-		let stuff = 'Click to view';
-		if (this.state.visible) {
-			stuff = this.props.children;
-		}
-		return (
-			<div>
-				<button
-					onClick={() => {
-						this.setState({ visible: !this.state.visible });
-					}}
-				>
-					Toggle
-				</button>
-				<div>{stuff}</div>
-			</div>
-		);
-	}
-}
