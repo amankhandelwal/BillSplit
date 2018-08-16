@@ -59,14 +59,14 @@ export default class Register extends React.Component {
 							className="register-form-field"
 							label="Password"
 							name="password"
-							placeholder="Password..."
+							placeholder="Password"
 							onChange={this.handleTextChange}
 							value={this.state.password}
 							type="password"
 						/>
 						<Input
 							className="register-form-field"
-							label="Re-enter Password"
+							label="Confirm Password"
 							name="confirmPassword"
 							placeholder="Re-enter Password..."
 							onChange={this.handleTextChange}

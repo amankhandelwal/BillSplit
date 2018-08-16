@@ -14,7 +14,7 @@
 	/*border: 2px solid #cbdaf2;*/
 	font-family: Raleway;
 	font-weight: bold;
-	box-shadow: 3px 3px #aaaaaa80;
+	box-shadow: 3px 3px 8px #aaaaaa80;
 	border-radius: 5px;
 	transform: translateX(-100vw);
 	animation: fromLeft 300ms ease-in-out 200ms forwards;

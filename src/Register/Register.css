@@ -56,17 +56,6 @@
 	padding: 2%;
 	width: 80%;
 }
-.register-form-field,
-select {
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: flex;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	box-sizing: border-box;
-}
-
 .register-options {
 	display: flex;
 	width: 100%;
