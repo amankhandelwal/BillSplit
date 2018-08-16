@@ -1,120 +1,120 @@
 {
-	"events": [
-		{
+	"events": {
+		"asdfa2b3c3a": {
 			"title": "Trip to abc",
-			"id": 1,
-			"members": [123232, 1231323, 123124],
-			"transactions": [
-				{
+			"id": "asdfa2b3c3a",
+			"members": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+			"transactions": {
+				"asdfa2b3c3a": {
 					"title": "Cab fare",
-					"id": 1,
-					"amount": 500,
-					"between": [123232, 1231323, 123124],
-					"paidBy": "123232"
+					"id": "asdfa2b3c3a",
+					"amount": "500",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				},
-				{
+				"23ewi": {
 					"title": "Cab fare",
-					"id": 2,
-					"amount": 200,
-					"between": [123232, 1231323, 123124],
-					"paidBy": "123232"
+					"id": "23ewi",
+					"amount": "200",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				}
-			]
+			}
 		},
-		{
+		"23ewi": {
 			"title": "Xyz bday",
-			"id": 2,
-			"members": [123232, 1231323, 123124],
-			"transactions": [
-				{
+			"id": "23ewi",
+			"members": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+			"transactions": {
+				"asdfa2b3c3a": {
 					"title": "Cake",
-					"id": 1,
-					"amount": 500,
-					"between": [123232, 1231323, 123124],
-					"paidBy": 123232
+					"id": "asdfa2b3c3a",
+					"amount": "500",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				},
-				{
+				"23ewi": {
 					"title": "props",
-					"id": 2,
-					"amount": 200,
-					"between": [123232, 1231323, 123124],
-					"paidBy": 123232
+					"id": "23ewi",
+					"amount": "200",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				}
-			]
+			}
 		},
-		{
+		"3ryewi": {
 			"title": "Trip to abc",
-			"id": 3,
-			"members": [123232, 1231323, 123124],
-			"transactions": [
-				{
+			"id": "3ryewi",
+			"members": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+			"transactions": {
+				"asdfa2b3c3a": {
 					"title": "Cab fare",
-					"id": 1,
-					"amount": 500,
-					"between": [123232, 1231323, 123124],
-					"paidBy": "123232"
+					"id": "asdfa2b3c3a",
+					"amount": "500",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				},
-				{
+				"23ewi": {
 					"title": "Cab fare",
-					"id": 2,
-					"amount": 200,
-					"between": [123232, 1231323, 123124],
-					"paidBy": "123232"
+					"id": "23ewi",
+					"amount": "200",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				}
-			]
+			}
 		},
-		{
+		"afd4sdg": {
 			"title": "Xyz bday",
-			"id": 4,
-			"members": [123232, 1231323, 123124],
-			"transactions": [
-				{
+			"id": "afd4sdg",
+			"members": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+			"transactions": {
+				"asdfa2b3c3a": {
 					"title": "Cake",
-					"id": 1,
-					"amount": 500,
-					"between": [123232, 1231323, 123124],
-					"paidBy": 123232
+					"id": "asdfa2b3c3a",
+					"amount": "500",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				},
-				{
+				"23ewi": {
 					"title": "props",
-					"id": 2,
-					"amount": 200,
-					"between": [123232, 1231323, 123124],
-					"paidBy": 123232
+					"id": "23ewi",
+					"amount": "200",
+					"between": ["1a2b3c3a", "dsafjj251", "bahds0614"],
+					"paidBy": "1a2b3c3a"
 				}
-			]
+			}
 		}
-	],
-	"members": [
-		{
+	},
+	"members": {
+		"1a2b3c3a": {
 			"name": "Aman Khandelwal",
 			"username": "amankhandelwal",
 			"password": "abcd",
-			"memberId": "123232",
+			"memberId": "1a2b3c3a",
 			"Auth": "sadkfu6154",
 			"profile": "source.unsplash.com/random/150x150",
-			"events": [1, 2, 3, 4],
-			"friends": [123232, 1231323, 123124]
+			"events": ["asdfa2b3c3a", "23ewi", "3ryewi", "afd4sdg"],
+			"friends": ["1a2b3c3a", "dsafjj251", "bahds0614"]
 		},
-		{
+		"275dssdg": {
 			"name": "Nilesh Kumar pandey",
 			"username": "nileshkk9",
 			"password": "hello",
-			"memberId": "45699",
+			"memberId": "275dssdg",
 			"Auth": "fuckyouman",
 			"profile": "source.unsplash.com/random/150x150",
-			"events": [1],
-			"friends": [123232, 44444]
+			"events": ["asdfa2b3c3a"],
+			"friends": ["1a2b3c3a", "4dsgdssdg"]
 		},
-		{
+		"4dsgdssdg": {
 			"name": "monu",
 			"username": "monu",
 			"password": "monu",
-			"memberId": "44444",
+			"memberId": "4dsgdssdg",
 			"Auth": "fuckboy",
 			"profile": "source.unsplash.com/random/150x150",
-			"events": [1, 2],
-			"friends": [123232, 45699]
+			"events": ["asdfa2b3c3a", "23ewi"],
+			"friends": ["1a2b3c3a", "275dssdg"]
 		}
-	]
+	}
 }
