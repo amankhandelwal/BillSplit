@@ -1,0 +1,26 @@
+.container404 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-height: 80vh;
+	text-align: center;
+}
+.title404 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #422;
+}
+.emoji404 {
+	font-size: 5em;
+	letter-spacing: 0;
+	line-height: 0;
+}
+.subtitle404 {
+	font-size: 1em;
+	color: #633;
+}
+.suggestion404 {
+	font-size: 1.3em;
+	color: #633;
+}

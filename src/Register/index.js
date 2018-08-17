@@ -1,15 +1,15 @@
-import React from "react";
-import firebase from "../firebase";
-import Input from "../CustomInput";
-import "./Register.css";
+import React from 'react';
+import firebase from '../firebase';
+import Input from '../CustomInput';
+import './Register.css';
 
 export default class Register extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			email: "",
-			password: "",
-			confirmPassword: ""
+			email: '',
+			password: '',
+			confirmPassword: ''
 		};
 		this.handleTextChange = this.handleTextChange.bind(this);
 		this.handleTextChange = this.handleTextChange.bind(this);
@@ -26,10 +26,7 @@ export default class Register extends React.Component {
 	handleRegisterClick() {
 		firebase
 			.auth()
-			.createUserWithEmailAndPassword(
-				this.state.email,
-				this.state.password
-			)
+			.createUserWithEmailAndPassword(this.state.email, this.state.password)
 			.catch(function(error) {
 				// Handle Errors here.
 				var errorCode = error.code;
@@ -73,16 +70,23 @@ export default class Register extends React.Component {
 							value={this.state.confirmPassword}
 							type="password"
 						/>
-						<button
-							id="submit"
-							className="register-submit"
-							onClick={this.handleRegisterClick()}
-						>
+						<button id="submit" className="register-submit" onClick={this.handleRegisterClick()}>
 							Register
 						</button>
+						<RegisterOptions />
 					</div>
 				</div>
 			</div>
 		);
 	}
 }
+
+const RegisterOptions = props => {
+	return (
+		<div className="login-options">
+			<a href="/login" className='plainLink'>
+				<p>Go to Login</p>
+			</a>
+		</div>
+	);
+};

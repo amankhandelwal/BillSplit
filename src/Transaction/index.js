@@ -68,7 +68,6 @@ export default class Transaction extends React.Component {
 
 		return (
 			<div className="App">
-				<Header>Transactions</Header>
 				<div className="dashboard-container">{allMyTransactions}</div>
 			</div>
 		);

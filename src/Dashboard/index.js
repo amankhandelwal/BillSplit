@@ -1,9 +1,9 @@
-import React from "react";
-import Card from "../Card";
-import Header from "../Header";
-import "./Dashboard.css";
+import React from 'react';
+import Card from '../Card';
+import Header from '../Header';
+import './Dashboard.css';
 
-export default class Events extends React.Component {
+export default class Dashboard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -14,22 +14,22 @@ export default class Events extends React.Component {
 	}
 
 	componentWillMount() {
-		fetch("http://localhost:8080/members")
+		fetch('http://localhost:8080/members')
 			.then(response => response.json())
 			.then(data => {
 				this.setState({ members: data });
 			})
 			.catch(err => {
-				console.log("Aww Snap");
+				console.log('Aww Snap');
 			});
 
-		fetch("http://localhost:8080/events")
+		fetch('http://localhost:8080/events')
 			.then(response => response.json())
 			.then(data => {
 				this.setState({ events: data });
 			})
 			.catch(err => {
-				console.log("Aww Snap");
+				console.log('Aww Snap');
 			});
 	}
 
@@ -52,7 +52,6 @@ export default class Events extends React.Component {
 
 		return (
 			<div className="App">
-				<Header>Events</Header>
 				<div className="dashboard-container">{allMyEvents}</div>
 			</div>
 		);

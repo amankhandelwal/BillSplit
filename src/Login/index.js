@@ -1,17 +1,17 @@
-import React from "react";
-import firebase from "../firebase";
-import Input from "../CustomInput";
-import "./Login.css";
+import React from 'react';
+import firebase from '../firebase';
+import Input from '../CustomInput';
+import './Login.css';
 
 export default class Login extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			email: "",
-			password: "",
-			token: "",
-			username: "",
-			photoURL: ""
+			email: '',
+			password: '',
+			token: '',
+			username: '',
+			photoURL: ''
 		};
 		this.handleGoogleSignIn = this.handleGoogleSignIn.bind(this);
 		this.handleEmailSignIn = this.handleEmailSignIn.bind(this);
@@ -35,7 +35,7 @@ export default class Login extends React.Component {
 				// Handle Errors here.
 				var errorCode = error.code;
 				var errorMessage = error.message;
-				console.log("Aww Snap !!");
+				console.log('Aww Snap !!');
 				// ...
 			});
 	}
@@ -66,7 +66,7 @@ export default class Login extends React.Component {
 				// The firebase.auth.AuthCredential type that was used.
 				var credential = error.credential;
 				// ...
-				console.log("Aww snap");
+				console.log('Aww snap');
 			});
 	}
 
@@ -97,26 +97,27 @@ export default class Login extends React.Component {
 							type="password"
 						/>
 					</div>
-					<button
-						id="submit"
-						className="login-submit"
-						onClick={() => this.handleEmailSignIn()}
-					>
+					<button id="submit" className="login-submit" onClick={() => this.handleEmailSignIn()}>
 						Submit
 					</button>
 
-					<button
-						className="login-submit"
-						onClick={() => this.handleGoogleSignIn()}
-					>
+					<button className="login-submit" onClick={() => this.handleGoogleSignIn()}>
 						Google Sign-In
 					</button>
-					<div className="login-options">
-						<p>Forgot Password?</p>
-						<p>Register with Email ID</p>
-					</div>
+					<LoginOptions />
 				</div>
 			</div>
 		);
 	}
 }
+
+const LoginOptions = props => {
+	return (
+		<div className="login-options">
+			<p>Forgot Password?</p>
+			<a href="/login" className="plainLink">
+				<p>Register with Email ID</p>
+			</a>
+		</div>
+	);
+};
