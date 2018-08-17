@@ -9,7 +9,8 @@ export default class Register extends React.Component {
 		this.state = {
 			email: '',
 			password: '',
-			confirmPassword: ''
+			confirmPassword: '',
+			error: ''
 		};
 		this.handleTextChange = this.handleTextChange.bind(this);
 		this.handleTextChange = this.handleTextChange.bind(this);
@@ -24,15 +25,23 @@ export default class Register extends React.Component {
 	};
 
 	handleRegisterClick() {
-		firebase
-			.auth()
-			.createUserWithEmailAndPassword(this.state.email, this.state.password)
-			.catch(function(error) {
-				// Handle Errors here.
-				var errorCode = error.code;
-				var errorMessage = error.message;
-				// ...
-			});
+		let error = '';
+		if (!this.state.email) error = 'Please enter an Email ID';
+		else if (!this.state.password) error = 'Please enter a Password';
+		else if (!this.state.confirmPassword) error = 'Please Confirm the Password';
+		else if (this.state.confirmPassword !== this.state.password) error = 'Passwords do not match';
+		else {
+			firebase
+				.auth()
+				.createUserWithEmailAndPassword(this.state.email, this.state.password)
+				.catch(function(error) {
+					// Handle Errors here.
+					var errorCode = error.code;
+					var errorMessage = error.message;
+					// ...
+				});
+		}
+		this.setState({ error });
 	}
 
 	render() {
@@ -41,6 +50,7 @@ export default class Register extends React.Component {
 				<div className="register-container">
 					<div className="register-title">
 						<h3>Register</h3>
+						<p className="error">{this.state.error}</p>
 					</div>
 					<div className="register-form">
 						<Input
@@ -70,7 +80,14 @@ export default class Register extends React.Component {
 							value={this.state.confirmPassword}
 							type="password"
 						/>
-						<button id="submit" className="register-submit" onClick={this.handleRegisterClick()}>
+						<div className="spacer" />
+						<button
+							id="submit"
+							className="register-submit"
+							onClick={() => {
+								this.handleRegisterClick();
+							}}
+						>
 							Register
 						</button>
 						<RegisterOptions />
@@ -84,7 +101,7 @@ export default class Register extends React.Component {
 const RegisterOptions = props => {
 	return (
 		<div className="login-options">
-			<a href="/login" className='plainLink'>
+			<a href="/login" className="plainLink">
 				<p>Go to Login</p>
 			</a>
 		</div>

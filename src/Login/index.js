@@ -11,7 +11,8 @@ export default class Login extends React.Component {
 			password: '',
 			token: '',
 			username: '',
-			photoURL: ''
+			photoURL: '',
+			error: ''
 		};
 		this.handleGoogleSignIn = this.handleGoogleSignIn.bind(this);
 		this.handleEmailSignIn = this.handleEmailSignIn.bind(this);
@@ -28,16 +29,20 @@ export default class Login extends React.Component {
 	};
 
 	handleEmailSignIn() {
-		firebase
-			.auth()
-			.signInWithEmailAndPassword(this.state.email, this.state.password)
-			.catch(function(error) {
-				// Handle Errors here.
-				var errorCode = error.code;
-				var errorMessage = error.message;
-				console.log('Aww Snap !!');
-				// ...
-			});
+		if (!this.state.email) this.setState({ error: 'Please enter an Email ID' });
+		else if (!this.state.password) this.setState({ error: 'Please enter a Password' });
+		else {
+			firebase
+				.auth()
+				.signInWithEmailAndPassword(this.state.email, this.state.password)
+				.catch(function(error) {
+					// Handle Errors here.
+					var errorCode = error.code;
+					var errorMessage = error.message;
+					console.log('Aww Snap !!');
+					// ...
+				});
+		}
 	}
 
 	handleGoogleSignIn() {
@@ -76,6 +81,7 @@ export default class Login extends React.Component {
 				<div className="login-container">
 					<div className="login-title">
 						<h3>Login</h3>
+						<p className="error">{this.state.error}</p>
 					</div>
 					<div className="login-form">
 						<Input
@@ -96,15 +102,16 @@ export default class Login extends React.Component {
 							value={this.state.password}
 							type="password"
 						/>
-					</div>
-					<button id="submit" className="login-submit" onClick={() => this.handleEmailSignIn()}>
-						Submit
-					</button>
+						<div className="spacer" />
+						<button id="submit" className="submit login-submit" onClick={() => this.handleEmailSignIn()}>
+							Submit
+						</button>
 
-					<button className="login-submit" onClick={() => this.handleGoogleSignIn()}>
-						Google Sign-In
-					</button>
-					<LoginOptions />
+						<button className="submit google-signin" onClick={() => this.handleGoogleSignIn()}>
+							<p><i class="fab fa-google spacer" />Google Sign-In</p>
+						</button>
+						<LoginOptions />
+					</div>
 				</div>
 			</div>
 		);
@@ -115,7 +122,7 @@ const LoginOptions = props => {
 	return (
 		<div className="login-options">
 			<p>Forgot Password?</p>
-			<a href="/login" className="plainLink">
+			<a href="/register" className="plainLink">
 				<p>Register with Email ID</p>
 			</a>
 		</div>
