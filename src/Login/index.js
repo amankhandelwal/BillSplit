@@ -80,14 +80,18 @@ export default class Login extends React.Component {
 					<div className="login-form">
 						<Input
 							className="login-form-field"
-							label="email"
+							label="Email"
+							name="email"
+							placeholder="Email..."
 							onChange={this.handleTextChange}
 							value={this.state.email}
 							type="text"
 						/>
 						<Input
 							className="login-form-field"
-							label="password"
+							label="Password"
+							name="password"
+							placeholder="Password..."
 							onChange={this.handleTextChange}
 							value={this.state.password}
 							type="password"
@@ -100,7 +104,7 @@ export default class Login extends React.Component {
 					>
 						Submit
 					</button>
-					OR
+
 					<button
 						className="login-submit"
 						onClick={() => this.handleGoogleSignIn()}
